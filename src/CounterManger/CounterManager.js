@@ -1,23 +1,24 @@
-import "./CounterManager.css";
 import { useState } from "react";
+import "./CounterManager.css";
 
-const CounterManager = () => {
-  const [ticket, setTicket] = useState(0);
-  const [last, setLast] = useState(0);
+const CounterManager = (props) => {
+  const [currentTicket, setCurrentTicket] = useState();
+
   const generate = () => {
-    const number = Math.floor(Math.random() * 10000);
-    setTicket(number);
-    setLast(ticket);
+    setCurrentTicket(props.ticketsList[0] + 1);
+    props.updateTicketsList(props.ticketsList[0] + 1);
   };
+
   return (
     <section>
+      <h1>Your Number: {currentTicket}</h1>
       <div>
         <h2>Now Serving:</h2>
-        <span>{ticket === 0 ? "0000" : ticket.toString().padStart(4, '0')}</span>
+        <span>{props.ticketsList[0]}</span>
       </div>
       <div>
         <h2>Last Number:</h2>
-        <span>{last.toString().padStart(4, '0')}</span>
+        <span>{props.ticketsList[1]}</span>
       </div>
       <button onClick={generate}>Take a Number</button>
     </section>
