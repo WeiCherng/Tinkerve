@@ -21,19 +21,18 @@ function App() {
   };
 
   return (
-    <main>
+    <main className="cont">
       <h1>Customer View</h1>
       <CounterManager
         servingList={serving}
         lastServing={last}
         updateTicketsList={updateTickets}
       ></CounterManager>
-      <section>
+      <section className="counters">
         {counters.map((e, index) => (
           <CustomerView
             counterCall={counterCall}
             queue={tickets}
-
             counter={e}
             key={index}
           ></CustomerView>

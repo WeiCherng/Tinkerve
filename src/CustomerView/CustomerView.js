@@ -18,8 +18,8 @@ const CustomerView = (props) => {
   };
 
   return (
-    <div>
-      <p>
+    <div className="counter-cont">
+      <section className="counter-indicator">
         {status === "Online" && (
           <span>
             <span style={{ color: "green" }}>&#x25cf;</span>
@@ -35,22 +35,26 @@ const CustomerView = (props) => {
             <span style={{ color: "grey" }}>&#x25cf;</span>
           </span>
         )}
-      </p>
-      <h3>Counter {props.counter}</h3>
+      </section>
+
+      <h3 className="counter-num">Counter {props.counter}</h3>
       <span>{status === "Offline" ? "Counter Offline" : serving}</span>
-      {status !== "Offline" ? (
-        <button
-          disabled={status === "Offline"}
-          onClick={() => setCounter("Offline")}
-        >
-          Close Counter
+
+      <section className="customer-btn-cont">
+        {status !== "Offline" ? (
+          <button
+            disabled={status === "Offline"}
+            onClick={() => setCounter("Offline")}
+          >
+            Close Counter
+          </button>
+        ) : (
+          <button onClick={() => setCounter("Online")}>Open Counter</button>
+        )}
+        <button disabled={status === "Offline"} onClick={callToCounter}>
+          Call to Counter
         </button>
-      ) : (
-        <button onClick={() => setCounter("Online")}>Open Counter</button>
-      )}
-      <button disabled={status === "Offline"} onClick={callToCounter}>
-        Call to Counter
-      </button>
+      </section>
     </div>
   );
 };

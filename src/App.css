@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
+}
+.cont {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+.counters {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:801px) {
+    .counters {
+        flex-direction: column;
+    }
+}
