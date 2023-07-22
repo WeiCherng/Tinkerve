@@ -7,7 +7,7 @@ function App() {
   const [tickets, setTickets] = useState([]);
   const [serving, setServing] = useState([]);
   const [last, setLast] = useState([0]);
-  
+
   const counters = [1, 2, 3, 4];
 
   const updateTickets = (e) => {
@@ -16,7 +16,7 @@ function App() {
 
   const counterCall = () => {
     setServing([...tickets]);
-    setLast([tickets[0], ...last])
+    setLast([tickets[0], ...last]);
     setTickets((prevNumbers) => prevNumbers.slice(1));
   };
 
@@ -43,4 +43,3 @@ function App() {
 }
 
 export default App;
-

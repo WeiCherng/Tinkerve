@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+#Ticket Counter Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For this assessment, Ive chosen React, Javascript and CSS as these are ones that I am most familiar with.
+Nevertheless, I'm also interested in using other libraries too!
 
-## Available Scripts
+Some Assumption that I have for this application:
+1. Tickets numbers are randomdly generated 
 
-In the project directory, you can run:
+How the applications works:
+Take a number button allow customer to take a ticket which is randomly generated and displayed.
+To use the counter, open any closed counter by clicking "Open Counter" button.
+Grey dots (Offline) should be turn into green indicate the counter is online but not serving customer
+To serve the customer on the opened counter, click the "Call the Counter" button.
+The counter will serve the first issued number
+Now Serving, Last Number will be displayed too.
+Green dot status will turn red indicate serving.
+To close the counter, simply click "Close Counter"
 
-### `npm start`
+Future Improvement that I would implement:
+1. better naming for the states
+2. when re-opening the counter, the cur_num will be 0000 instead of the number before closing
+3. better styling
+4. a component to display the all numbers that is in waiting queue
+5. better logic for the whole app
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Some thoughts:
+I would say the logic for the app is not the greatest and very messy.
+I believe there are better way to improve this such as using other React Hooks
+besides useState or even libraries like React Redux.
+I hope to learn and widen my knowledge on React overall and hopefully understand better 
+on how React works in the future to prevent such issue!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
