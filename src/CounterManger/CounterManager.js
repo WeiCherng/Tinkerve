@@ -5,8 +5,10 @@ const CounterManager = (props) => {
   const [currentTicket, setCurrentTicket] = useState();
 
   const generate = () => {
-    setCurrentTicket(props.ticketsList[0] + 1);
-    props.updateTicketsList(props.ticketsList[0] + 1);
+    const number = Math.floor(Math.random() * 10000);
+    setCurrentTicket(number);
+
+    props.updateTicketsList(number);
   };
 
   return (
@@ -14,11 +16,11 @@ const CounterManager = (props) => {
       <h1>Your Number: {currentTicket}</h1>
       <div>
         <h2>Now Serving:</h2>
-        <span>{props.ticketsList[0]}</span>
+        <span>{props.servingList[0]}</span>
       </div>
       <div>
         <h2>Last Number:</h2>
-        <span>{props.ticketsList[1]}</span>
+        <span>{props.lastServing[1]}</span>
       </div>
       <button onClick={generate}>Take a Number</button>
     </section>

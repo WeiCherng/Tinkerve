@@ -10,10 +10,10 @@ const CustomerView = (props) => {
   };
 
   const callToCounter = () => {
-    if (props.queue[0] !== 0) {
+    if (props.queue[0] !== undefined) {
       setServing(props.queue[0]);
       setStatus("Serving");
-      props.call();
+      props.counterCall();
     }
   };
 
